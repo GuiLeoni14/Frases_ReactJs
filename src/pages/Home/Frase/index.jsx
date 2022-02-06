@@ -1,5 +1,6 @@
 import Typist from 'react-typist';
 import P from 'prop-types';
+import './styles.scss';
 import { useRef, useContext, useEffect, useState } from 'react';
 import { loadFrases, searchOneFrases } from '../../../context/FrasesProvider/actions';
 import { FrasesContext } from '../../../context/FrasesProvider/context';
@@ -21,24 +22,26 @@ export default function Frase() {
         };
     }, [frasesDispatch]);
     useEffect(() => {
-        searchOneFrases(frasesDispatch, frases).then((dispatch) => {
-            dispatch();
-        });
+        if (frases.length > 0) {
+            searchOneFrases(frasesDispatch, frases).then((dispatch) => {
+                dispatch();
+            });
+        }
     }, [frasesDispatch, frases]);
     return (
-        <>
-            {frase && (
-                <div className="main-frase">
-                    <Typist>
+        <div className="main-frase">
+            {frase['quote'] && (
+                <>
+                    <Typist startDelay={800}>
                         <span>{frase['quote']}</span>
                     </Typist>
                     <Typist>
                         <span>{frase['author']}</span>
-                        <Typist.Backspace count={8} delay={200} />
+                        <Typist.Backspace count={frase['author'].length} delay={100} />
                         <span>{frase['author']}</span>
                     </Typist>
-                </div>
+                </>
             )}
-        </>
+        </div>
     );
 }

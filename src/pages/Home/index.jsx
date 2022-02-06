@@ -5,13 +5,14 @@ import './styles.scss';
 import { useEffect, useState } from 'react';
 import FrasesProvider from '../../context/FrasesProvider';
 import Frase from './Frase';
+import AmongUs from '../../components/Particles/AmongUs';
 export default function Home() {
     return (
         <FrasesProvider>
             <section className="s-home">
                 <Container>
                     <div className="main-home">
-                        <Stars />
+                        <AmongUs />
                         <Frase />
                     </div>
                 </Container>

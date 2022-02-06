@@ -1,0 +1,19 @@
+.main-frase{
+    width: 100%;
+    max-width: 80rem;
+    padding: 2rem;
+    background-color: #2d0d59;
+    z-index: 1;
+    box-shadow: 0rem 0rem 4rem #000;
+    border-radius: 0.5rem;
+    span{
+        text-align: justify;
+        color: #fff;
+        font-size: 3rem;
+        align-self: flex-start;
+    }
+    p{
+        font-size: 3rem;
+        color: #ffff;
+    }
+}

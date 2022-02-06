@@ -1,11 +1,12 @@
 .s-home{
-    background-color: #000;
-    min-height: 100vh;
+    background-color: #333333;
+    margin: 0 auto;
     .main-home{
-        span{
-            color: #fff;
-            font-size: 3rem;
-        }
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
     }
 }
 

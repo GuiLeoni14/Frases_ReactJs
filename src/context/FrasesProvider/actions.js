@@ -1,5 +1,6 @@
 import * as types from './types';
 export const loadFrases = async (dispatch) => {
+    dispatch({ type: types.FRASES_LOADING });
     const response = await fetch('http://localhost:5000/frases');
     const data = await response.json();
     return () => dispatch({ type: types.FRASES_SUCCESS, payload: data });
