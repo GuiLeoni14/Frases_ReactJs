@@ -2,7 +2,8 @@
     width: 100%;
     max-width: 80rem;
     padding: 2rem;
-    background-color: #2d0d59;
+    margin-top: 2rem;
+    background-color: #ffaa00;
     z-index: 1;
     box-shadow: 0rem 0rem 4rem #000;
     border-radius: 0.5rem;
@@ -15,5 +16,22 @@
     p{
         font-size: 3rem;
         color: #ffff;
+    }
+    #autor{
+        position: relative;
+        padding-left: 5rem;
+        font-style: italic;
+        &::after{
+            content: "";
+            width: 4rem;
+            height: 0.5rem;
+            border-radius: 0.4rem;
+            background-color: #fff;
+            position: absolute;
+            z-index: 10;
+            left: 2rem;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
     }
 }

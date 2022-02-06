@@ -33,12 +33,12 @@ export default function Frase() {
             {frase['quote'] && (
                 <>
                     <Typist startDelay={800}>
-                        <span>{frase['quote']}</span>
+                        <span id="frase">{frase['quote']}</span>
                     </Typist>
                     <Typist>
                         <span>{frase['author']}</span>
                         <Typist.Backspace count={frase['author'].length} delay={100} />
-                        <span>{frase['author']}</span>
+                        <span id="autor">{frase['author']}</span>
                     </Typist>
                 </>
             )}
