@@ -1,22 +1,21 @@
 import Container from '../../layout/Container';
-import Particles from 'react-tsparticles';
 import Typist from 'react-typist';
-import AmongUs from '../../components/Particles/AmongUs';
 import Stars from '../../components/Particles/Stars';
 import './styles.scss';
+import { useEffect, useState } from 'react';
+import FrasesProvider from '../../context/FrasesProvider';
+import Frase from './Frase';
 export default function Home() {
     return (
-        <section className="s-home">
-            <Container>
-                <div className="main-home">
-                    <Stars />
-                    <Typist>
-                        <span> First Sentence </span>
-                        <Typist.Backspace count={8} delay={200} />
-                        <span> Phrase </span>
-                    </Typist>
-                </div>
-            </Container>
-        </section>
+        <FrasesProvider>
+            <section className="s-home">
+                <Container>
+                    <div className="main-home">
+                        <Stars />
+                        <Frase />
+                    </div>
+                </Container>
+            </section>
+        </FrasesProvider>
     );
 }
