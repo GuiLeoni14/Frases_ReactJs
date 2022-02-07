@@ -21,12 +21,17 @@
         position: relative;
         padding-left: 5rem;
         font-style: italic;
+        background: linear-gradient(90deg, rgba(169,166,223,1) 0%, rgba(251,0,247,1) 50%, rgba(0,212,255,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-right: 0.4rem;
         &::after{
             content: "";
             width: 4rem;
             height: 0.5rem;
             border-radius: 0.4rem;
-            background-color: #fff;
+            background-color: rgba(251,0,247,1);
             position: absolute;
             z-index: 10;
             left: 2rem;
