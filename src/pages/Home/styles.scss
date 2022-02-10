@@ -1,6 +1,4 @@
 .s_home{
-    background: linear-gradient(90deg, rgba(169,166,223,1) 0%, rgba(251,0,247,1) 50%, rgba(0,212,255,1) 100%);
-    margin: 0 auto;
     .main-home{
         width: 100%;
         display: flex;
@@ -11,11 +9,29 @@
         h1{
             font-size: 4rem;
             font-style: italic;
-            background: linear-gradient(90deg, rgba(255,186,0,1) 0%, rgba(247,255,0,1) 48%, rgba(247,255,0,1) 91%);
             color: black;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        }
+    }
+    &.s_home_light{
+        background: linear-gradient(90deg, rgba(169,166,223,1) 0%, rgba(251,0,247,1) 50%, rgba(0,212,255,1) 100%);
+        .main-home{
+            h1{
+                background: linear-gradient(90deg, rgba(255,186,0,1) 0%, rgba(247,255,0,1) 48%, rgba(247,255,0,1) 91%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    &.s_home_dark{
+        background-color: #000 !important;
+        .main-home{
+            h1{
+                background: linear-gradient(90deg, rgba(243,255,0,1) 0%, rgba(255,0,200,1) 48%, rgba(251,255,0,1) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
     }
 }
