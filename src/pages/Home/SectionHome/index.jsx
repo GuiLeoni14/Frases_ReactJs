@@ -7,7 +7,6 @@ import { toggleTheme } from '../../../context/ThemeProvider/actions';
 import { useContext } from 'react';
 export default function SectionHome() {
     const {
-        setThemeMode,
         themeMode: { themeDark },
     } = useContext(ThemeContext);
     return (
