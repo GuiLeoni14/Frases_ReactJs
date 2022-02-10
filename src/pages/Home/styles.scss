@@ -8,8 +8,14 @@
         min-height: 100vh;
         h1{
             font-size: 4rem;
+            text-align: center;
             font-style: italic;
             color: black;
+        }
+        @media(max-width: 400px){
+            h1{
+                font-size: 3rem;
+            }
         }
     }
     &.s_home_light{
