@@ -7,6 +7,9 @@
     position: relative;
     z-index: 1;
     border-radius: 0.5rem;
+    .Typist{
+        text-align: center;
+    }
     p{
         color: #fff;
         display: inline;
@@ -38,7 +41,7 @@
             width: 4rem;
             height: 0.5rem;
             border-radius: 0.4rem;
-            background-color: rgba(251,0,247,1);
+            background-color: #fffb00;
             position: absolute;
             z-index: 10;
             left: 2rem;
@@ -63,6 +66,18 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+    }
+    @media(max-width: 500px){
+        padding: 2rem 4rem;
+        img{
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    }
+    @media(max-width: 420px){
+        span{
+            font-size: 2.5rem;
         }
     }
 }

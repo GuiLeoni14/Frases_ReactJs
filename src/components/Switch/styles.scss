@@ -3,8 +3,9 @@
     align-items: center;
     justify-content: center;
     position: absolute;
+    left: 50%;
     top: 5rem;
-    right: 5rem;
+    transform: translate(-50%,-50%);
     label{
         font-size: 2rem;
         margin-right: 1.2rem;
