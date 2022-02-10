@@ -16,12 +16,10 @@
         background-color: rgb(70, 69, 69);
         border-radius: 2rem;
         position: relative;
-        box-shadow: 0 0.1rem 1rem #000;
+        box-shadow: 0 0.1rem 1rem #fff;
         cursor: pointer;
-        &:focus{
-            box-shadow: 0 0 0 0.2rem black;
-        }
         &[data-state="checked"]{
+            box-shadow: 0 0.1rem 1rem #000;
             background-color: #fff;
         }
         &:hover{
@@ -40,6 +38,16 @@
         transform: translateX(0.2rem);
         &[data-state="checked"]{
             transform: translateX(3.9rem);
+        }
+    }
+    &.dark_main_switch{
+        label span:nth-child(1){
+            color: #fff;
+        }
+    }
+    &.light_main_switch{
+        label span:nth-child(2){
+            color: #fff;
         }
     }
 }

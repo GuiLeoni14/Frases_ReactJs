@@ -10,8 +10,10 @@ export default function Switch_All() {
         themeMode: { themeDark },
     } = useContext(ThemeContext);
     return (
-        <div className="main_switch">
-            <label htmlFor="switch">Escuro/Claro</label>
+        <div className={themeDark ? 'main_switch dark_main_switch' : 'main_switch light_main_switch'}>
+            <label htmlFor="switch">
+                <span>Escuro</span>/<span>Claro</span>
+            </label>
             <Switch.Root
                 className="switch"
                 defaultChecked
