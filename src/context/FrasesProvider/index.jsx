@@ -5,7 +5,6 @@ import { data } from './data';
 import { FrasesContext } from './context';
 export default function FrasesProvider({ children }) {
     const [stateFrases, frasesDispatch] = useReducer(reducer, data);
-    console.log(stateFrases);
     return <FrasesContext.Provider value={{ stateFrases, frasesDispatch }}>{children}</FrasesContext.Provider>;
 }
 

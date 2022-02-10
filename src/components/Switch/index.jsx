@@ -1,7 +1,14 @@
 import './styles.scss';
 import * as Switch from '@radix-ui/react-switch';
 import P from 'prop-types';
-export default function Switch_All({ setMode, mode }) {
+import { useContext, useEffect } from 'react';
+import { ThemeContext } from '../../context/ThemeProvider/context';
+import { toggleTheme } from '../../context/ThemeProvider/actions';
+export default function Switch_All() {
+    const {
+        setThemeMode,
+        themeMode: { themeDark },
+    } = useContext(ThemeContext);
     return (
         <div className="main_switch">
             <label htmlFor="switch">Escuro/Claro</label>
@@ -10,7 +17,9 @@ export default function Switch_All({ setMode, mode }) {
                 defaultChecked
                 name="switch"
                 id="switch"
-                onCheckedChange={() => setMode(!mode)}
+                onClick={() => {
+                    toggleTheme({ setThemeMode, themeDark });
+                }}
             >
                 <Switch.Thumb className="switch_thumb" />
             </Switch.Root>
@@ -18,6 +27,6 @@ export default function Switch_All({ setMode, mode }) {
     );
 }
 Switch_All.propTypes = {
-    setMode: P.func,
-    mode: P.bool,
+    setThemeMode: P.func,
+    themeDark: P.bool,
 };
