@@ -7,12 +7,14 @@
     position: relative;
     z-index: 1;
     border-radius: 0.5rem;
-    .Typist{
+    .frase{
         text-align: center;
+        display: flex;
+        flex-direction: column;
+
     }
     p{
         color: #fff;
-        display: inline;
         font-size: 3rem;
     }
     span{
@@ -33,6 +35,7 @@
     }
     #autor{
         position: relative;
+        text-align: start;
         padding-left: 5rem;
         font-style: italic;
         padding-right: 0.4rem;

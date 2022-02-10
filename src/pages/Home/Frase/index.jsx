@@ -38,16 +38,12 @@ export default function Frase() {
         <div className={themeDark ? 'main_frase main_frase_dark' : 'main_frase main_frase_light'}>
             {frase['quote'] && (
                 <>
-                    <img src={left_aspas} alt="" id="left_aspas" />
-                    <Typist startDelay={800}>
+                    <div className="frase">
+                        <img src={left_aspas} alt="" id="left_aspas" />
                         <p id="frase">{frase['quote']}</p>
-                    </Typist>
-                    <img src={right_aspas} alt="" id="right_aspas" />
-                    <Typist>
-                        <span>{frase['author']}</span>
-                        <Typist.Backspace count={frase['author'].length} delay={100} />
+                        <img src={right_aspas} alt="" id="right_aspas" />
                         <span id="autor">{frase['author']}</span>
-                    </Typist>
+                    </div>
                 </>
             )}
         </div>
