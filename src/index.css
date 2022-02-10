@@ -13,7 +13,9 @@
 html{
     font-size: 62.5%;
 }
-
+body{
+    position: relative;
+}
 section{
     width: 100%;
 }

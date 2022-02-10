@@ -1,9 +1,21 @@
-.s-home{
-    background-color: #000;
+.s_home{
+    background: linear-gradient(90deg, rgba(169,166,223,1) 0%, rgba(251,0,247,1) 50%, rgba(0,212,255,1) 100%);
+    margin: 0 auto;
     .main-home{
-        span{
-            color: #fff;
-            font-size: 10rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 100vh;
+        h1{
+            font-size: 4rem;
+            font-style: italic;
+            background: linear-gradient(90deg, rgba(255,186,0,1) 0%, rgba(247,255,0,1) 48%, rgba(247,255,0,1) 91%);
+            color: black;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 }

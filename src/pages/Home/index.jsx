@@ -1,22 +1,24 @@
 import Container from '../../layout/Container';
-import Particles from 'react-tsparticles';
 import Typist from 'react-typist';
-import AmongUs from '../../components/Particles/AmongUs';
 import Stars from '../../components/Particles/Stars';
 import './styles.scss';
+import { useEffect, useRef, useState } from 'react';
+import FrasesProvider from '../../context/FrasesProvider';
+import Frase from './Frase';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Switch_All from '../../components/Switch';
+import ThemeProvider from '../../context/ThemeProvider';
+import SectionHome from './SectionHome';
 export default function Home() {
+    AOS.init({
+        once: false,
+    });
     return (
-        <section className="s-home">
-            <Container>
-                <div className="main-home">
-                    <Stars />
-                    <Typist>
-                        <span> First Sentence </span>
-                        <Typist.Backspace count={8} delay={200} />
-                        <span> Phrase </span>
-                    </Typist>
-                </div>
-            </Container>
-        </section>
+        <ThemeProvider>
+            <FrasesProvider>
+                <SectionHome />
+            </FrasesProvider>
+        </ThemeProvider>
     );
 }

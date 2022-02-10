@@ -1,0 +1,4 @@
+export const FRASES_LOADING = 'FRASES_LOADING ';
+export const FRASES_SUCCESS = 'FRASES_SUCCESS';
+export const FRASE_LOADING = 'FRASE_LOADING ';
+export const FRASE_SUCCESS = 'FRASE_SUCCESS';
