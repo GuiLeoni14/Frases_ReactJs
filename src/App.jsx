@@ -8,11 +8,9 @@ import Home from './pages/Home';
 function App() {
     return (
         <Router>
-            <NavBar />
             <Routes>
                 <Route exact path="/" element={<Home />}></Route>
             </Routes>
-            <Footer />
         </Router>
     );
 }
