@@ -1,0 +1,32 @@
+header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    .container{
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                &:not(:first-child){
+                    margin-left: 2rem;
+                }
+                svg{
+                    width: 5rem;
+                    height: 5rem;
+                    transition: all .3s;
+                    path{
+                        color: #ffee00;
+                    }
+                    &:hover{
+                        transform: scale(1.1);
+                        path{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
